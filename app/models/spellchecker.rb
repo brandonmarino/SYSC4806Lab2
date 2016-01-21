@@ -124,8 +124,9 @@ class Spellchecker
   # returns distance-1 replacements sorted by descending frequency in the model
   # else if there are valid distance-2 replacements,
   # returns distance-2 replacements sorted by descending frequency in the model
-  # else returns nil
+  # else returns nil 
   def correct(word)
+    
   end
     
   
