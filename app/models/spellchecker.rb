@@ -126,7 +126,19 @@ class Spellchecker
   # returns distance-2 replacements sorted by descending frequency in the model
   # else returns nil 
   def correct(word)
-    
+    if (@dictionary.has_key?(word))
+      return word
+    else
+      possibilites = edits1 (word)
+      if (possibilities.empty?)
+        return possibilities
+      else
+        possibilites = known_edits2 (word)
+        if (possibilities.empty?)
+          return possibilities
+        end
+      end
+    end
   end
     
   
